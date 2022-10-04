@@ -2,4 +2,7 @@
 FROM ubuntu:22.10
 
 RUN mkdir /loadbalancer
-ADD gobetween /loadbalancer
+
+RUN sudo snap install gobetween --edge
+
+ADD config

@@ -1,8 +1,10 @@
 # Pull base image.
 FROM ubuntu:22.10
 
-RUN mkdir /loadbalancer
+RUN mkdir /config
 
-RUN sudo snap install gobetween --edge
+RUN sudo snap install gobetween 
 
-ADD config
+ADD gobetween.toml /config
+
+
